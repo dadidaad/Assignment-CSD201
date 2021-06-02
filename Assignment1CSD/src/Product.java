@@ -19,9 +19,14 @@ public class Product {
         this.saled = saled;
         this.price = price;
     }  
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+    
     @Override
     public String toString() {
-        return String.format("%-6s |  %-9s |     %-6d |    %-4d |  %-6.1f |   %-5.1f", pcode, pro_name, quantity, saled, price, price*saled);
+        return String.format("%s,%s,%d,%d,%.1f", pcode, pro_name, quantity, saled, price);
     }
     
 }

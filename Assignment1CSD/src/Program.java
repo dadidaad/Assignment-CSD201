@@ -59,6 +59,26 @@ public class Program {
                     pm.deleteNodeAfterNodehavingCode();
                     sc.nextLine();
                     continue;
+                case 11:
+                    pm.f1();
+                    sc.nextLine();
+                    continue;
+                case 12:
+                    pm.f2();
+                    sc.nextLine();
+                    continue;
+                case 13:
+                    pm.f3();
+                    sc.nextLine();
+                    continue;
+                case 14:
+                    pm.f4();
+                    sc.nextLine();
+                    continue;
+                case 15:
+                    pm.f5();
+                    sc.nextLine();
+                    continue;
                 default:
                     System.out.println("Don't have this option!");
                     continue;

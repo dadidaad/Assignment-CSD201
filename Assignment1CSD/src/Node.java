@@ -28,5 +28,10 @@ public class Node {
     Node(Ordering x){
         this(x,null);
     }
+
+    public void setInfoProduct(Product infoProduct) {
+        this.infoProduct = infoProduct;
+    }
+    
  
 }

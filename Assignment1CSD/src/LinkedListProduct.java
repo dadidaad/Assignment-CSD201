@@ -9,8 +9,14 @@ public class LinkedListProduct {
     public Node getHead() {
         return head;
     }
-    
-    
+    public void clear(){
+        Node q = head;
+        while(true){
+            if(q == null)   break;
+            remove(q);
+            q = q.next;
+        }
+    }
     public boolean isEmpty(){
         return head == null;
     }
@@ -130,4 +136,16 @@ public class LinkedListProduct {
         }
     }
     
+    public void sortbysaled(){
+        if(isEmpty())   return;
+        for(Node i = head; i != null; i = i.next){
+            for(Node j = i.next; j != null; j = j.next){
+                if(i.infoProduct.saled > j.infoProduct.saled){
+                    Product temp = i.infoProduct;
+                    i.infoProduct = j.infoProduct;
+                    j.infoProduct = temp;
+                }
+            }
+        }
+    }
 }

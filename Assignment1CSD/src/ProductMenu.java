@@ -195,4 +195,39 @@ public class ProductMenu {
             break;
         }
     }
+    
+    
+    public void f1() throws IOException{
+        t.clear();
+        loadData();
+        t.traverseProduct();
+    }
+    public void f2() throws IOException{
+        t.clear();
+        loadData();
+        t.deleteByPcode("2");
+        t.traverseProduct();
+    }
+    public void f3() throws IOException{
+        t.clear();
+        loadData();
+        Node q = t.searchByPcode("3");
+        Product x = q.infoProduct;
+        x.setQuantity(9);
+        q.setInfoProduct(x);
+        t.traverseProduct();
+    }
+    public void f4() throws IOException{
+        t.clear();
+        loadData();
+        Product x = new Product("6","E",3,2,1);
+        t.addLast(x);
+        t.traverseProduct();
+    }
+    public void f5() throws IOException{
+        t.clear();
+        loadData();
+        t.sortbysaled();
+        t.traverseProduct();
+    }
 }
